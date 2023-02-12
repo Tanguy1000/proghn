@@ -1,0 +1,83 @@
+html { background-color: #CACFD2;
+  font-size: 14px;
+  margin: auto;
+  width: 80%;
+  color: white;
+  font-family: Helvetica, sans-serif	
+  
+}
+
+
+#page {
+  background-color: #CD6155;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  border: 12px solid white;
+  padding: 10px;
+}
+
+
+.entete {
+	font-size: 1.3em ;
+	color : white;
+	text-align: center;
+	padding: 10px;
+	height: auto
+}
+
+
+img {
+  margin-left: 650px;
+  margin-right: 120px;
+  
+}
+
+#logo { 
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+#photo {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  }
+
+
+
+footer {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+#aboutme {
+  text-align: center;
+  margin: auto;
+  padding: 10px
+  
+}
+
+table {
+border: solid #000000;
+width: 40%;
+border-collapse: collapse
+}
+td, th {
+border: solid white;
+width: 50%;
+}
+
+#ol{
+  display : inline-block;
+  margin :auto;
+  text-align:left;
+  padding: 10px
+}
+
+
+
