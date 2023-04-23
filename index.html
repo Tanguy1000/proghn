@@ -52,7 +52,69 @@
 			<li>Langage et pouvoir symbolique, Pierre Bourdieu</li>
         </ol>
 		
-        
+        <div style="margin: 50px 5% 0px 5%; padding: 50px 10%; border-top: 2px solid black;">
+        <button id="boutonAide" onclick="afficheCacheAide()">Afficher l'aide</button>
+        <br />
+        <div id="aide" style="display: none">
+            <h2>Ceci est l'aide de l'utilisation du site.</h2>
+            <h3>Bonjour.</h3>
+            <p>Le bouton <button onclick="javascript:void(0);">Bonjour</button> permet d'afficher un message de bienvenue.</p>
+            <h3>Charger un fichier texte.</h3>
+            <p>Pour commencer, il faut donner un fichier texte via le bouton <button onclick="javascript:void(0);">Choose File</button></p>
+            <p>Le texte chargé sera affiché à gauche.</p>
+            <h3>Segmenter le texte chargé.</h3>
+            <p>Ensuite, on clique sur le bouton <button onclick="javascript:void(0);">Segmentation</button> pour afficher le texte segmenté.</p>
+            <p>Le texte segmenté sera affiché à droite.</p>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+        <br />
+        <div style="text-align:center">
+            <span>
+                <label for="fileInput" class="btn"><small>Sélectionner un fichier au format .txt :</small></label>
+                <input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" />
+            </span>
+        </div>
+        <br />
+        <p style="text-align:center;">
+            <small>
+                <label for="delimID" class="mylabel">Délimiteur(s)</label>
+                &nbsp;
+                <input type="text" value=" ,;’'~|&#@=`-.?!%*$()[]{}_:+«»§\/" name="delim" id="delimID" size="40" />
+            </small>
+            <br />
+            <small>
+                <label for="poleID" class="mylabel">Pôle</label>
+                &nbsp;
+                <input type="text" placeholder="entrez un pôle..." name="pole" id="poleID" size="20" />
+            </small>
+            &nbsp;
+            <small>
+                <label for="lgID" class="mylabel">Longueur</label>
+                &nbsp;
+                <input type="text" value="10" name="lg" id="lgID" size="10" />
+            </small>
+            <br />
+            <br />
+            <button onclick="alert('Bonjour et bienvenue sur le site !');"><span>Bonjour</span></button>
+            <br />
+            <br />
+            <button class="submit" onclick="segmentation();"><span>Segmentation</span></button>
+            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>action 1</span></button>
+            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
+            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
+            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
+            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
+            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 6</span></button>
+        </p>
+    </div>
+    <div id="logger" style="width:100%"></div>
+    <br />
+    <div id="Global">
+        <div id="fileDisplayArea"></div>
+        <div id="page-analysis"></div>
+    </div>
 			
 		<footer>
 				<a href="https://www.sorbonne-nouvelle.fr/" style="color: white"> > Site de la Sorbonne Nouvelle</a>
