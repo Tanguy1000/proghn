@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="assets\css\style.css">
-		</head>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script type="text/javascript" language="javascript" src="assets/js/main.js"></script>
+    </head>
 	
     <body id="page">
 	
@@ -52,27 +53,52 @@
 			<li>Langage et pouvoir symbolique, Pierre Bourdieu</li>
         </ol>
 		
-        <div style="margin: 50px 5% 0px 5%; padding: 50px 10%; border-top: 2px solid black;">
+ 
+	
+
+
+ <div style="margin: 50px 5% 0px 5%; padding: 50px 10%; border-top: 2px solid black;">
         <button id="boutonAide" onclick="afficheCacheAide()">Afficher l'aide</button>
         <br />
+	
         <div id="aide" style="display: none">
-            <h2>Ceci est l'aide de l'utilisation du site.</h2>
-            <h3>Bonjour.</h3>
-            <p>Le bouton <button onclick="javascript:void(0);">Bonjour</button> permet d'afficher un message de bienvenue.</p>
-            <h3>Charger un fichier texte.</h3>
-            <p>Pour commencer, il faut donner un fichier texte via le bouton <button onclick="javascript:void(0);">Choose File</button></p>
-            <p>Le texte chargé sera affiché à gauche.</p>
-            <h3>Segmenter le texte chargé.</h3>
-            <p>Ensuite, on clique sur le bouton <button onclick="javascript:void(0);">Segmentation</button> pour afficher le texte segmenté.</p>
-            <p>Le texte segmenté sera affiché à droite.</p>
+            <h2> Ceci est une aide pour l'utilisation du site.  </h2>
+						<h3> Description des fonctionnalités  </h3>
+						<p>Le bouton <button onclick="javascript:void(0);">Bonjour</button> permet d'afficher un message de bienvenue.</p>
+						<h3>Charger un fichier texte.</h3>
+						<p>Pour commencer, il faut donner un fichier texte via le bouton <button onclick="javascript:void(0);">Chosir un fichier</button></p>
+						<p>Le texte chargé sera affiché à gauche.</p>
+						<h3>Segmenter le texte chargé.</h3>
+						<p>Ensuite, on clique sur le bouton <button onclick="javascript:void(0);">Segmentation</button> pour afficher le texte segmenté.</p>
+						<p>Le texte segmenté sera affiché à droite.</p>
+						<h3>Compter les mots.</h3>
+						<p>Pour avoir le comptage des mots, triés du plus fréquent au moins fréquent, on clique sur le bouton <button onclick="javascript:void(0);">Dictionnaire</button></p>
+						<p>Le tableau sera affiché à droite.</p>
+						<h3>Afficher les lignes qui contiennent un motif.</h3>
+						<p>Pour afficher les lignes qui contiennent un motif, on clique sur le bouton <button onclick="javascript:void(0);">Grep</button></p>
+						<p>Il faut avoir chargé un fichier en mémoire et renseigné le champs <label class="mylabel"><small>Pôle</small></label>.</p>
+						<p><a href="https://fr.wikipedia.org/wiki/Grep">Grep</a> est une commande historique de Unix ayant cette fonctionnalité. Nous employons ce nom en hommage.</p>
+						<p>Les lignes seront affichées à droite.</p>
+						<p> Pour chercher un terme dans le texte et de l'afficher en contexte, on clique sur le bouton <button onclick="javascript:void(0);">Concordancier</button></p>
+                        <p>Le tableau sera affiché à droite.</p>
+						<h3>Autres fonctionnalités</h3>
+						<p>Pour mettre le texte en majuscule, on clique sur le bouton<button onclick="javascript:void(0);">Texte Majuscule</button></p>
+						<p>Le texte sera affiché à droite.</p>
+						<p>Pour savoir, qu'elle est le mot le plus long dans tout le texte, on clique sur le bouton<button onclick="javascript:void(0);">Mot le plus long</button></p>
+						<p>Le tableau sera affiché à droite.</p>
+						<p>Le bouton<button onclick="javascript:void(0);">Texte Minuscule</button> va afficher le texte en minuscule</p>
+						<p>Le texte sera affiché à droite.</p>	
         </div>
     </div>
+	
+		<h1 style="text-align:center;">Analyse des données dans un fichier</h1>
 
     <div id="page-wrapper">
         <br />
         <div style="text-align:center">
             <span>
-                <label for="fileInput" class="btn"><small>Sélectionner un fichier au format .txt :</small></label>
+                <label for="fileInput" class="btn"><small><style>.btn {color: black;}
+</style>Sélectionner un fichier au format .txt :</small></label>
                 <input id="fileInput" type="file" accept="text/plain" name="Fichier (.txt)" />
             </span>
         </div>
@@ -100,26 +126,29 @@
             <button onclick="alert('Bonjour et bienvenue sur le site !');"><span>Bonjour</span></button>
             <br />
             <br />
-            <button class="submit" onclick="segmentation();"><span>Segmentation</span></button>
-            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !');"><span>action 1</span></button>
-            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 2</span></button>
-            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 3</span></button>
-            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 4</span></button>
-            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 5</span></button>
-            <button class="submit" onclick="alert('Je ne fais rien, changez-moi !')"><span>action 6</span></button>
+            <!--<button class="submit" onclick="segmentation();"><span>Segmentation</span></button>-->
+            <button class="submit" onclick="dictionnaire();"><span>Dictionnaire</span></button>
+            <button class="submit" onclick="grep()"><span>Grep</span></button>
+            <button class="submit" onclick="concordancier()"><span>Concordancier</span></button>
+			<button class="submit" onclick="majuscule()"><span>Texte Majuscule</span></button>
+            <button class="submit" onclick="long();"><span>Mot le plus long</span></button>
+            <button class="submit" onclick="minuscule()"><span>Texte Minuscule</span></button>
         </p>
     </div>
     <div id="logger" style="width:100%"></div>
     <br />
     <div id="Global">
-        <div id="fileDisplayArea"></div>
-        <div id="page-analysis"></div>
+       <div id="fileDisplayArea" style="color: black;"></div>
+<div id="page-analysis" style="color: black;"></div>
     </div>
-			
-		<footer>
-				<a href="https://www.sorbonne-nouvelle.fr/" style="color: white"> > Site de la Sorbonne Nouvelle</a>
-			</footer>
-			
-	</body>
-	
+
+    <footer>
+      <p><a href="http://www.univ-paris3.fr/">Lien vers le site de Sorbonne Nouvelle.</a></p>
+    </footer>
+
+</div>
+    </body>
 </html>
+
+
+
